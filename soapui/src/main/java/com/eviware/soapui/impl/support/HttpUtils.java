@@ -53,8 +53,8 @@ public class HttpUtils {
         if (StringUtils.isNullOrEmpty(endpoint)) {
             return endpoint;
         }
-        endpoint = endpoint.toLowerCase().trim();
-        if (!endpoint.startsWith("http://") && !endpoint.startsWith("https://") && !endpoint.startsWith("$")) {
+        String endpointLowerCase = endpoint.toLowerCase().trim();
+        if (!endpointLowerCase.startsWith("http://") && !endpointLowerCase.startsWith("https://") && !endpointLowerCase.startsWith("$")) {
             return "http://" + endpoint;
         }
 
